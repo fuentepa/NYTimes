@@ -8,6 +8,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "NYTimes"
 include ':app'
-include ':domain'
-include ':data'
-include ':usecases'
+include ':app:domain'
+include ':app:data'
+include ':app:usecases'
