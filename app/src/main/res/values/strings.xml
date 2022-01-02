@@ -15,5 +15,15 @@
 
     <string name="txt_haciendo_consultas">Consultando...</string>
 
+    <string name="txt_article_type">Tipo Artículo</string>
+    <string name="txt_most_emailes">Más enviadas por email</string>
+    <string name="txt_most_shared">Más compartidas en redes</string>
+    <string name="txt_most_viewed">Más vistas</string>
+
+    <string name="txt_period">Periodo (dias)</string>
+
+    <string name="title_articles_search">Buscador de Articulos</string>
+    <string name="title_articles_list">Listado de Articulos</string>
+
 
 </resources>

@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
-    android:background="@color/colorBackgroundActivity"
     android:gravity="center_horizontal|center_vertical"
     android:layout_centerInParent="true"
     android:orientation="vertical"
@@ -24,7 +23,6 @@
       android:layout_height="wrap_content"
       android:layout_marginBottom="8dp"
       android:textAlignment="center"
-      android:progressTint="@color/colorPrimary"
     />
 
   <TextView
@@ -34,7 +32,6 @@
       android:layout_height="wrap_content"
       android:textAppearance="?android:attr/textAppearanceMedium"
       android:text="@string/txt_haciendo_consultas"
-      android:textColor="@color/colorPrimary"
       tools:text="@string/txt_haciendo_consultas"
     />
 

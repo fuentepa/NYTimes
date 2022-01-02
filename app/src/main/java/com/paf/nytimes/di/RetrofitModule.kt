@@ -10,6 +10,7 @@ import com.paf.nytimes.data.server.TheArticleDb
 import com.paf.nytimes.data.server.TheArticleDbDataSource
 import com.paf.nytimes.data.source.LocalDataSource
 import com.paf.nytimes.data.source.RemoteDataSource
+import com.paf.nytimes.ui.search.SearchViewModel
 import org.koin.android.ext.koin.androidApplication
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -49,5 +50,5 @@ val useCaseModule = module {
 }
 
 val viewModelModule = module {
-
+    viewModel { SearchViewModel( ) }
 }

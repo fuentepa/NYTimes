@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string-array name="article_type">
+    <item>@string/txt_most_emailes</item>
+    <item>@string/txt_most_shared</item>
+    <item>@string/txt_most_viewed</item>
+  </string-array>
+
+  <string-array name="period_type">
+    <item>1</item>
+    <item>7</item>
+    <item>30</item>
+  </string-array>
+
+</resources>
