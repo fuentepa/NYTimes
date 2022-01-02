@@ -1,4 +1,4 @@
-package com.paf.nytimes.ui
+package com.paf.nytimes.ui.main
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar

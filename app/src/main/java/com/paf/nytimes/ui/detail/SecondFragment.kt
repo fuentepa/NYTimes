@@ -1,4 +1,4 @@
-package com.paf.nytimes.ui
+package com.paf.nytimes.ui.detail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
