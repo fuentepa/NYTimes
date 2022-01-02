@@ -5,14 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
-import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import com.paf.nytimes.R
 import com.paf.nytimes.databinding.FragmentSearchBinding
-import com.paf.nytimes.ui.BaseActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SearchFragment : Fragment() {
@@ -37,8 +34,6 @@ class SearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as BaseActivity).supportActionBar?.title =  resources.getString(R.string.title_articles_search)
-
         binding.spinnerType.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 vm.setSelectedType(position)
@@ -47,17 +42,15 @@ class SearchFragment : Fragment() {
             override fun onNothingSelected(p0: AdapterView<*>?) { Unit }
         }
 
-        binding.spinnerPeriod.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+        binding.fab.setOnClickListener {
+            val action = SearchFragmentDirections.actionSearchFragmentToListFragment(
+                binding.spinnerType.selectedItemPosition,
+                binding.spinnerPeriod.selectedItemPosition,
+                binding.cbFacebook.isChecked
+            )
 
-            }
-
-            override fun onNothingSelected(p0: AdapterView<*>?) { Unit }
+            findNavController().navigate(action)
         }
-
-        //binding.cbFacebook.setOnClickListener { TODO("Not yet implemented") } //solo se indica facebook porque la api no soporta tweeter ahora
-
-        binding.fab.setOnClickListener { findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment) }
 
         setupObservers()
     }
